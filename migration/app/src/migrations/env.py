@@ -8,6 +8,8 @@ from alembic import context
 
 from db_config import db_settings
 
+import migrations.models as models
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -22,7 +24,7 @@ config.set_main_option('sqlalchemy.url', db_settings.data_source_name)
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = sqlalchemy.MetaData()
+target_metadata = models.Base.metadata
 
 
 # other values from the config, defined by the needs of env.py,

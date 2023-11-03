@@ -1,6 +1,6 @@
 from django.urls import path, include
-from src.app.controller import TestController
+from src.app.controller import EventController
 
 urlpatterns = [
-    path('test/', TestController.as_view({'get': 'get_result'})),
+    path('event/', EventController.as_view({'get': 'get_result', 'post': 'create'})),
 ]
