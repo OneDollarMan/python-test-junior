@@ -10,6 +10,7 @@ def get_last_5_events():
 def create_event(request):
     event = UserEventModel(date_created=datetime.now(), user_ip=get_user_ip(request))
     sess.add(event)
+    sess.commit()
     return True
 
 
