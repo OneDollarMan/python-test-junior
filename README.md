@@ -1,4 +1,4 @@
-# python-test-junior
+# python-test-microservice
 Microservice test task. Following tasks were made:
   1. Making event model from /spec/ with sqlalchemy
   2. Making migrations with alembic
